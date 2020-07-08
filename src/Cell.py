@@ -46,13 +46,13 @@ class cell:
     def get_south(self):
         return self.south
     
-    def set_north(self, north):
+    def get_north(self, north):
         return self.north
     
-    def set_east(self, east):
+    def get_east(self, east):
         return self.east
     
-    def set_west(self, west):
+    def get_west(self, west):
         return self.west
     
     def is_corner_cell(self):
