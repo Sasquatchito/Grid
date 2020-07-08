@@ -7,10 +7,10 @@ This class represents a "cell" in a grid that will be used as building blocks fo
 
 class cell:
     def __init__(self, val=0, east=None, west=None, north=None, south=None):
-        self.east_neighbor = east
-        self.west_neighbor = west
-        self.north_neighbor = north
-        self.south_neighbor = south
+        self.east = east
+        self.west = west
+        self.north = north
+        self.south = south
         self.edge_cell = False
         self.val = val
         self.id = 0
@@ -22,19 +22,15 @@ class cell:
         self.val = val
 
     def set_south(self, south):
-        if(self.south is None):
             self.south = south
     
     def set_north(self, north):
-        if(self.north is None):
            self.north = north
             
     def set_east(self, east):
-        if(self.east is None):
             self.east = east
     
     def set_west(self, west):
-        if(self.west is None):
             self.west = west
     
     def get_id(self):
@@ -46,20 +42,20 @@ class cell:
     def get_south(self):
         return self.south
     
-    def get_north(self, north):
+    def get_north(self):
         return self.north
     
-    def get_east(self, east):
+    def get_east(self):
         return self.east
     
-    def get_west(self, west):
+    def get_west(self):
         return self.west
     
     def is_corner_cell(self):
-        ne_corner = self.east == None and self.north == None
-        se_corner = self.east == None and self.south == None
-        sw_corner = self.west == None and self.north == None 
-        nw_corner = self.west == None and self.south == None 
+        ne_corner = self.east is None and self.north is None
+        se_corner = self.east is None and self.south is None
+        sw_corner = self.west is None and self.north is None 
+        nw_corner = self.west is None and self.south is None 
         return ne_corner or se_corner or sw_corner or nw_corner
     
     def is_peninsula_cell(self):

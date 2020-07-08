@@ -1,5 +1,5 @@
-from .Cell import cell
-from .Grid import Grid
+from src.Cell import cell
+from src.Grid import grid
 
 class maze:
     
