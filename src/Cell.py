@@ -1,3 +1,10 @@
+'''
+Created by Hector Cervantes
+Date: 07-07-2020
+
+This class represents a "cell" in a grid that will be used as building blocks for Grid Objects.
+'''
+
 class cell:
     def __init__(self, val=0, east=None, west=None, north=None, south=None):
         self.east_neighbor = east

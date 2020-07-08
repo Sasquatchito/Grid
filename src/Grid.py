@@ -1,3 +1,12 @@
+from .Cell import Cell;
+
+
+'''
+Created by Hector Cervantes
+Date: 07/07/2020
+
+This class will be used to represent a "grid" of many different shapes and sizes.
+'''
 class grid:
     def __init__(self, cell):
         self.root = cell 
@@ -32,7 +41,7 @@ class grid:
 
     def add_east_cell(self, cell, val = 0):
         cell.set_east_cell(cell(0))
-        cell.east.set(self.cell_count + 1)
+        cell.east.set_id(self.cell_count + 1)
     
     def add_west_cell(self, cell, val = 0):
         cell.set_west_cell(cell(0))
