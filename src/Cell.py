@@ -6,17 +6,22 @@ This class represents a "cell" in a grid that will be used as building blocks fo
 '''
 
 class cell:
-    def __init__(self, val=0, east=None, west=None, north=None, south=None):
+    def __init__(self, val=0, x=0, y=0, east=None, west=None, north=None, south=None):
         self.east = east
         self.west = west
         self.north = north
         self.south = south
         self.edge_cell = False
         self.val = val
+        self.x = 0
+        self.y = 0
         self.id = 0
+
+    def set_x(self, x):
+        self.x = x
     
-    def set_id(self, id):
-        self.id = id
+    def set_y(self, y):
+        self.y = y
 
     def set_val(self, val):
         self.val = val
@@ -50,6 +55,12 @@ class cell:
     
     def get_west(self):
         return self.west
+    
+    def get_x(self):
+        return self.x
+    
+    def get_y(self):
+        return self.y
     
     def is_corner_cell(self):
         ne_corner = self.east is None and self.north is None
